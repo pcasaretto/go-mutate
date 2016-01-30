@@ -41,8 +41,6 @@ func main() {
 		f.Body = &ast.BlockStmt{token.NoPos, make([]ast.Stmt, 0), token.NoPos}
 	}
 
-	// Parse the file containing this very example
-	// but stop after processing the imports.
 	f, err := parser.ParseDir(fset, "./test_fixtures", nil, 0)
 	if err != nil {
 		fmt.Println(err)
